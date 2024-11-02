@@ -111,22 +111,93 @@ def interior_point_method(C, A, eps, alpha, x_initial):
     return x, optimal_value, iteration
 
 # Values for initial problem
-# Input format for Simplex Method
-Cs = np.array([5, 4])
-As = np.array([[1, 2], [3, 2]])
-bs = np.array([6, 12])
-
-# Input format for Interior-Point algorithm
-C = np.array([5, 4, 0, 0])
-A = np.array([[1, 2, 1, 0], [3, 2, 0, 1]])
-b = np.array([6, 12])
-
-# Initial starting point
-x_initial = np.array([1, 1, 3, 7])
 
 # The approximation accuracy
 eps = 0.001
 
+# LPP Problem
+# Input format for Simplex Method
+Cs = np.array([3, 2])
+As = np.array([[2, 1], [1, 1], [1, 0]])
+bs = np.array([10, 8, 4])
+
+# Input format for Interior-Point algorithm
+C = np.array([3, 2, 0, 0, 0])
+A = np.array([[2, 1, 1, 0, 0], [1, 1, 0, 1, 0], [1, 0, 0, 0, 1]])
+b = np.array([10, 8, 4])
+
+# Initial starting point
+x_initial = np.array([1, 1, 7, 6, 3])
+
+# Test 1
+# Input format for Simplex Method
+# Cs = np.array([5, 4])
+# As = np.array([[1, 2], [3, 2]])
+# bs = np.array([6, 12])
+
+# # Input format for Interior-Point algorithm
+# C = np.array([5, 4, 0, 0])
+# A = np.array([[1, 2, 1, 0], [3, 2, 0, 1]])
+# b = np.array([6, 12])
+
+# # Initial starting point
+# x_initial = np.array([1, 1, 3, 7])
+
+# Test 2
+# Input format for Simplex Method
+# Cs = np.array([6, 8])
+# As = np.array([[1, 1], [5, 4]])
+# bs = np.array([10, 40])
+
+# # Input format for Interior-Point algorithm
+# C = np.array([6, 8, 0, 0])
+# A = np.array([[1, 1, 1, 0], [5, 4, 0, 1]])
+# b = np.array([10, 40])
+
+# # Initial starting point
+# x_initial = np.array([1, 1, 10, 31])
+
+# Test 3
+# Input format for Simplex Method
+# Cs = np.array([4, 3])
+# As = np.array([[-1, 1]])
+# bs = np.array([2])
+
+# # Input format for Interior-Point algorithm
+# C = np.array([4, 3, 0])
+# A = np.array([[-1, 1, 1]])
+# b = np.array([2])
+
+# # Initial starting point
+# x_initial = np.array([1, 1, 2])
+
+# Test 4
+# Input format for Simplex Method
+# Cs = np.array([10, 6])
+# As = np.array([[1, 1], [2, 1], [1, 2]])
+# bs = np.array([100, 150, 120])
+
+# # Input format for Interior-Point algorithm
+# C = np.array([10, 6, 0, 0, 0])
+# A = np.array([[1, 1, 1, 0, 0], [2, 1, 0, 1, 0], [1, 2, 0, 0, 1]])
+# b = np.array([100, 150, 120])
+
+# # Initial starting point
+# x_initial = np.array([1, 1, 98, 147, 117])
+
+# Test 5
+# Input format for Simplex Method
+# Cs = np.array([2, 5])
+# As = np.array([[1, 2], [2, 1]])
+# bs = np.array([20, 18])
+
+# # Input format for Interior-Point algorithm
+# C = np.array([2, 5, 0, 0])
+# A = np.array([[1, 2, 1, 0], [2, 1, 0, 1]])
+# b = np.array([20, 18])
+
+# # Initial starting point
+# x_initial = np.array([1, 1, 17, 15])
 
 result = simplex_solver(Cs, As, bs, eps)
 print("\nResult by Simplex:")
